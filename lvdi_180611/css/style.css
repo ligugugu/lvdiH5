@@ -46,7 +46,7 @@ body,input{ color:#fff;font:400 14px/1.5 '黑体',sans-serif,arial; }
 #popup a{ color:#016a90; text-decoration: underline; }
 
 #indexPage{ width:100%;height:100%; }
-#bts {margin-top: 45%;}
+#bts {margin-top: 48%;}
 #bts img{ width:35%; display: block; margin:0 auto 19px; }
 #index_bg{ position: absolute;bottom: 0;width:100%; }
 
@@ -101,8 +101,8 @@ img#d_title{ width:23%;position:absolute;bottom:5%; left:37%; }
 .submit ul{width: 100%;}
 .submit li{width: 100%;height: 25px;line-height: 25px;color: #407363;float: none;}
 .submit li span{display: inline-block;width: 30%;text-align: center;font-size: 13px;overflow: hidden;height: 100%;}
-.icon{position: absolute;width: 20px;height: 20px;border-radius: 50%;background-color: rgba(221,81,63,.5);animation: icon 2s infinite linear;-webkit-animation: icon 2s infinite linear;}
-.icont{position: absolute;width: 15px;height: 15px;border-radius: 50%;background-color: rgba(221,81,63,.5);animation: icon 2s infinite linear;-webkit-animation: icon 2s infinite linear;}
+/* .icon{position: absolute;width: 20px;height: 20px;border-radius: 50%;background-color: rgba(221,81,63,.5);animation: icon 2s infinite linear;-webkit-animation: icon 2s infinite linear;} */
+/* .icont{position: absolute;width: 15px;height: 15px;border-radius: 50%;background-color: rgba(221,81,63,.5);animation: icon 2s infinite linear;-webkit-animation: icon 2s infinite linear;} */
 
 /* .icon0{left: 392.667px;top: 59.2784px;}
 .icon1{left: 592.073px;top: 56.5878px;}
@@ -110,10 +110,10 @@ img#d_title{ width:23%;position:absolute;bottom:5%; left:37%; }
 .icon3{left: 651.427px;top: 490.025px;} */
 .dscb{position: absolute;width: 65px;color: red;display: none;}
 .dscb img{width: 100%;}
-#dscb0{left: 362.667px;top: 68.2784px;}
+/* #dscb0{left: 362.667px;top: 68.2784px;}
 #dscb1{left: 592.073px;top: 56.5878px;}
 #dscb2{left: 629.25px;top: 312.635px;}
-#dscb3{left: 651.427px;top: 490.025px;}
+#dscb3{left: 651.427px;top: 490.025px;} */
 @keyframes icon {0%{opacity: 1;transform: scale(1.5);}50%{opacity: 0.3;transform: scale(0.3);}100%{opacity: 1;transform: scale(1.5);}}
 .ship{position: absolute;width: 40px;height: 57.5px;background: url(../images/ship.png) no-repeat;background-size: 100% 100%;
     bottom: 0;
@@ -208,8 +208,8 @@ animation: ship 20s infinite linear;
     width: 70%;
     left: 15%; }
 #g_fail{  }
-#g_bts{ position:absolute; top:54%; width:100%; }
-#g_bts img{ width:36%; display: block; margin:30px auto 0; }
+#g_bts{ position:absolute; top:55%; width:100%; }
+#g_bts img{ width:36%; display: block; margin:40px auto 0; }
 
 #game_cover{ background-color:rgba(255,188,10,0.4); width:100%; height:100%; position:absolute; z-index: 99; }
 #game_cover1{ background-color:rgba(0,0,0,0.7); height:100%; }
