@@ -100,13 +100,16 @@ img#d_title{ width:23%;position:absolute;bottom:5%; left:37%; }
 .submitTitle span{display: inline-block;width: 31%;text-align: center;font-size: 15px;font-weight: 600;}
 .submit ul{width: 100%;}
 .submit li{width: 100%;height: 25px;line-height: 25px;color: #407363;float: none;}
-.submit li span{display: inline-block;width: 31%;text-align: center;font-size: 13px;overflow: hidden;height: 100%;}
-.icon{position: absolute;width: 20px;height: 20px;border-radius: 50%;background-color: #dd513f;animation: icon 2s infinite linear;-webkit-animation: icon 2s infinite linear;}
+.submit li span{display: inline-block;width: 30%;text-align: center;font-size: 13px;overflow: hidden;height: 100%;}
+.icon{position: absolute;width: 20px;height: 20px;border-radius: 50%;background-color: rgba(221,81,63,.5);animation: icon 2s infinite linear;-webkit-animation: icon 2s infinite linear;}
+.icont{position: absolute;width: 15px;height: 15px;border-radius: 50%;background-color: rgba(221,81,63,.5);animation: icon 2s infinite linear;-webkit-animation: icon 2s infinite linear;}
+
 /* .icon0{left: 392.667px;top: 59.2784px;}
 .icon1{left: 592.073px;top: 56.5878px;}
 .icon2{left: 629.25px;top: 312.635px;}
 .icon3{left: 651.427px;top: 490.025px;} */
-.dscb{position: absolute;color: red;display: none;}
+.dscb{position: absolute;width: 65px;color: red;display: none;}
+.dscb img{width: 100%;}
 #dscb0{left: 362.667px;top: 68.2784px;}
 #dscb1{left: 592.073px;top: 56.5878px;}
 #dscb2{left: 629.25px;top: 312.635px;}
@@ -148,7 +151,8 @@ animation: ship 20s infinite linear;
     from { transform: rotate(0deg);}
     to { transform: rotate(360deg);}
 }
-
+.aline_left{text-align: left !important;
+    padding-left: 4px;}
 
 
 #confirm{ position:absolute;width:92%;top:26%;left:4%;border-radius:3px; background-color: #fff; color:#2d2d2d; border: 1px solid #c7c7c7; border-top: 0;display:none;}
