@@ -98,7 +98,8 @@ img#d_title{ width:23%;position:absolute;bottom:5%; left:37%; }
 #submitBottom{bottom: -32px;}
 .submitTitle{line-height: 40px;color: #407363;}
 .submitTitle span{display: inline-block;width: 31%;text-align: center;font-size: 15px;font-weight: 600;}
-.submit ul{width: 100%;}
+.submit ul{width: 100%;height: 250px;
+    overflow: scroll;}
 .submit li{width: 100%;height: 25px;line-height: 25px;color: #407363;float: none;}
 .submit li span{display: inline-block;width: 30%;text-align: center;font-size: 13px;overflow: hidden;height: 100%;}
 /* .icon{position: absolute;width: 20px;height: 20px;border-radius: 50%;background-color: rgba(221,81,63,.5);animation: icon 2s infinite linear;-webkit-animation: icon 2s infinite linear;} */
