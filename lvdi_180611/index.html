@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0, width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="format-detection" content="telphone=no, email=no">
+    <meta name="screen-orientation" content="portrait">
+    <title>绿地新里城端午节</title>
+    <meta name="description" content="smart roadshow" />
+    <meta name="keywords" content="smart roadshow" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+        var BASE_URL = location.href.indexOf('didi') == -1 ? './' : '';
+        var pathUrl = [];
+        var tmp = location.href.replace(location.hash, '').split('?');
+        var uri = tmp[0].split('/');
+        for( var i=0; i<uri.length; i++ )
+            if( uri[i].indexOf( '.html' ) == -1 && uri[i].indexOf( '.php' ) == -1 )
+                pathUrl.push(uri[i]);
+        pathUrl = pathUrl.join('/');
+    </script>
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="js/common.js" type="text/javascript"></script>
+    <script src="js/TweenMax.min.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+
+</head>
+<body>
+    <!-- music -->
+    <a href="javascript:0" id="micBtn" class="micBtn rotate"></a>
+
+<div id="loading" style="display: none;">
+    <div id="loaderImage">
+        <div class="loadTxt">Loading...</div>
+        <div style="clear:both;"></div>
+        <div class="loadingBar">
+            <div id="percentBar"></div>
+        </div>
+    </div>
+</div>
+
+<div id="others">
+</div>
+
+<div id="wrap" >
+    <!-- 游戏规则 -->
+    <div id="detail">
+        <div class="info">
+            <img id="close_detail" src="images/cross.png" />
+            <div class="container">
+                <img src="images/detail.png" />
+                <!-- <img src="images/map.gif" />
+                <img src="images/detail_f.png" /> -->
+            </div>
+        </div>
+    </div>
+    <!-- 游戏规则 end-->
+
+    <!-- 游戏奖励 -->
+    <div id="award">
+        <div class="info">
+            <img id="close_award" src="images/cross.png" />
+            <div class="container">
+                <img src="images/award.png" />
+            </div>
+        </div>
+    </div>
+    <!-- 游戏奖励 end-->
+    <section id="indexPage"><!-- 主页面 -->
+        <div style="position:absolute;top:9%;z-index: 100; text-align: center;">
+            <!-- <img style="width:100%;" src="images/title.png" /> -->
+            <div id="bts">
+                <img id="bt_start" src="images/bt_start.png" />
+                <img id="bt_detail" src="images/bt_detail.png" />
+                <img id="bt_drive" src="images/bt_drive.png" />
+                <img id="bt_dealer" src="images/bt_dealer.png" />
+            </div>
+        </div>
+    </section><!-- 主页面 end-->
+
+    <section id="gamePage"><!-- 游戏页面 -->
+        <div id="result"><!-- 结果页面 -->
+            <img class="res" id="g_success" src="images/g_success.png" />
+            <img class="res" id="g_fail" src="images/g_fail.png" />
+            <div id="g_bts">
+                <img id="bt_g_drive" src="images/bt_g_drive.png" />
+                <img id="bt_retry" src="images/bt_retry.png" />
+            </div>
+        </div><!-- 结果页面 end-->
+        <div class="g_top" id="g_timer"><span>Time: 00:00</span><img src="images/g_timer.png" /></div>
+        <div class="g_top" id="g_right"><span>0/4</span><img src="images/g_right.png" /></div>
+        <div id="game_cover"><!-- 游戏提示 -->
+            <div id="game_cover1">
+                <div id="game_tip">
+                    <img src="images/g_tip.png"/>
+                </div>
+                <div id="counting"> <!-- 倒计时 -->
+                    <img id="g_t_t" src="images/g_t_t.png"/><br/>
+                    <img id="g_t_c" src="images/g_t_3.png"/>
+                </div>
+            </div>
+        </div><!-- 游戏提示 end-->
+
+        <!--<img class="arrows" id="a_r" src="images/arrow.png" />-->
+        <!--<img class="arrows" id="a_b" src="images/arrow.png" />-->
+        <!--<img class="arrows" id="a_l" src="images/arrow.png" />-->
+
+        <div id="game">
+            <img id="game_bg" src="images/game.jpg" />
+            <div class="icon0 icon"></div>
+            <div class="icon1 icon"></div>
+            <div class="icon2 icon"></div>
+            <div class="icon3 icon"></div>
+            <p id="dscb0" class="dscb">亲贤街长治路东北角</p>
+            <p id="dscb1" class="dscb">真武路康宁街西北角</p>
+            <p id="dscb2" class="dscb">绿地中央广场一层</p>
+            <p id="dscb3" class="dscb">晋阳街体育路东南角</p>
+            <div class="ship"></div>
+        </div>
+
+    </section><!-- 游戏页面 end-->
+
+    <section id="submitPage"><!-- 排名页面 -->
+        <div class="submitCon">
+            <div class="submit">
+                <div id="submitTop">
+                    <img src="images/submitTop.png" alt="">
+                </div>
+                <div class="submitTitle">
+                    <span>昵称</span>
+                    <span>时间</span>
+                    <span>排名</span>
+                </div>
+                <ul>
+                    <li>
+                        <span>12第几名第几名第几名第几名第几名第几名</span>
+                        <span>12:12第几名第几名第几名</span>
+                        <span>第几名第几名第几名第几名</span>
+                    </li>
+                    <li>
+                        <span>12第几名第几名第几名第几名第几名第几名</span>
+                        <span>12:12第几名第几名第几名第几名第几名</span>
+                        <span>第几名第几名第几名第几名第几名</span>
+                    </li>
+                    <li>
+                        <span>12第几名第几名第几名第几名</span>
+                        <span>12:12第几名第几名第几名第几名</span>
+                        <span>第几名第几名第几名第几名第几名</span>
+                    </li>
+                    <li>
+                        <span>12第几名第几名第几名第几名</span>
+                        <span>12:12第几名第几名第几名第几名</span>
+                        <span>第几名第几名第几名第几名第几名第几名</span>
+                    </li>
+                    <li>
+                        <span>12</span>
+                        <span>12:12</span>
+                        <span>第几名</span>
+                    </li>
+                    <li>
+                        <span>12</span>
+                        <span>12:12</span>
+                        <span>第几名</span>
+                    </li>
+                    <li>
+                        <span>12</span>
+                        <span>12:12</span>
+                        <span>第几名</span>
+                    </li>
+                    <li>
+                        <span>12</span>
+                        <span>12:12</span>
+                        <span>第几名</span>
+                    </li>
+                </ul>
+                <div id="submitBottom">
+                    <img src="images/bt_retry.png" alt="">
+                </div>
+            </div>
+        </div>
+
+    </section><!-- 排名页面 end-->
+
+    <section id="offlinePage">
+        <div id="offline">
+            <div id="o_top">
+                <img src="images/d_top.png" />
+            </div>
+            <img src="images/spot.png" style="width:100%;opacity:0.4;position: absolute;top:0;left:0;" />
+            <div id="offline_con">
+                <img src="images/offline.png" />
+                <a href="tel:029-83658811"><img src="images/offline1.png" /></a>
+                <a href="tel:029-63353333"><img src="images/offline2.png" /></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- <img id="bt_sm_detail" src="images/bt_d_detail.png" /> -->
+    <!-- <img id="music" src="images/music.png" /> -->
+
+</div>
+<!--横屏提示-->
+<div id="orientLayer" class="mod-orient-layer">
+    <div class="mod-orient-layer__content">
+        <i class="icon mod-orient-layer__icon-orient"></i>
+
+        <div class="mod-orient-layer__desc">请将手机竖起来哟</div>
+    </div>
+</div>
+<script src="dist/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+
+    var audio = document.createElement('audio');
+    audio.src = "audio/bgm.mp3";//音乐链接
+    audio.loop = true;//音乐是否循环
+    audio.play();
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        audio.play();
+    }, false);
+
+    $(".micBtn").on("click",function(){
+        if (audio.paused == true) {
+            audio.play();
+            $(this).addClass("rotate").removeClass("micBtn2");
+        } else {
+            audio.pause();
+            $(this).removeClass("rotate").addClass("micBtn2");
+        }
+    });
+
+</script>
+
+
+</body>
+</html>
