@@ -186,14 +186,14 @@ animation: ship 20s infinite linear;
     /*display: none;*/
 }
 
-#gamePage{ overflow:hidden; position:relative; }
+#gamePage{ overflow:hidden; position:relative;     z-index: 1000;}
 #game{ position:absolute; width:200%; top:0; left:-50%; }
 #game_bg{ width:150%; display:block; }
 #game .gps{ position:absolute; width:7%; height:4%; background-color:rgba(0,0,0,0); }
 #game #p0{ left:50%; }
-#game #p1{ left:77%; }
-#game #p2{ left:81%; width:10%; height:5%; }
-#game #p3{ left:88%; }
+/* #game #p1{ left:79%; } */
+#game #p1{ left:81%; width:10%; height:5%; }
+#game #p2{ left:88%; }
 #game #p4{ left:36%; width:11%; height:7%; }
 #game #p5{ left:29%; }
 #game #p6{ left:73%; }

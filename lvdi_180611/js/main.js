@@ -537,7 +537,9 @@ function Index(){
         });
 
         $('#bt_start').click( function(){
-            $("#indexPage").hide();
+            // $("#indexPage").hide();
+            // $("#gamePage").show();
+            // alert("gamePage show")
             location.hash = 'game';
         } );
 
@@ -834,7 +836,7 @@ Classes.extends( Offline, Page );
 function Game(){
     this.name = 'Game';
     this.preload = [
-        'images/g_success.png','images/g_fail.png','images/bt_g_drive.png','images/bt_retry.png',
+        'images/game.jpg','images/g_success.png','images/g_fail.png','images/bt_g_drive.png','images/bt_retry.png',
         'images/g_timer.png','images/g_right.png','images/g_tip.png','images/g_t_t.png','images/g_t_3.png',
         'images/game.png','images/bt_confirm.png','images/bt_cancel.png','images/f_fail.png','images/f_success.png',
         'images/qr.png'
@@ -849,9 +851,9 @@ function Game(){
     this.bgHeight = 827;
     this.position = [
         {top:55},
-        {top:52},
         {top:358},
         {top:570},
+        {top:52},
         {top:255},
         {top:365},
         {top:152},
@@ -940,17 +942,17 @@ function Game(){
         $('#game_cover').hide();
         if( !$('#p0').attr('id') ){
             var rate = 44/57;
-            for( var i=0; i<4; i++ ){
+            for( var i=0; i<3; i++ ){
                 $('#game').append( '<img class="gps" id="p'+i+'" src="images/blank.gif" />' );
                 $('#game').append( '<img class="flags" id="f'+i+'" src="images/flag.png" />' );
                 var top = this.position[i].top / this.bgHeight * $('#game_bg').height();
-                $('#p'+i).css('top', top+'px');
+                $('#p'+i).css('top', (top+15)+'px');
 
                 var p = $('#p'+i).position();
                 $('#f'+i).css('left', p.left+$('#p'+i).width()/3+'px');
                 $('#f'+i).css('top', p.top-$('body').width()*0.07/rate/2+'px');
                 $('#dscb'+i).css('left', p.left+$('#p0').width()/3+'px');
-                $('#dscb'+i).css('top', (top+20)+'px');
+                $('#dscb'+i).css('top', (top+10)+'px');
                 $('.ship').css('left', p.left+$('#p'+i).width()/3-210+'px');
             }
             $('.gps').on('touchend', this.collect);
@@ -974,8 +976,8 @@ function Game(){
         // $('.flags').eq(idx).show();
         $('.icon'+idx).hide();
         $('#dscb'+idx).show();
-        $('#g_right span').html( self.collected+'/4' );
-        if( self.collected == 4 ){
+        $('#g_right span').html( self.collected+'/3' );
+        if( self.collected == 3 ){
             self.gameOver( true );
         }
     };
@@ -1002,7 +1004,7 @@ function Game(){
             this.position[i].collected = false;
         }
         $('#g_timer span').html( 'Time: 00:'+this.seconds );
-        $('#g_right span').html( '0/4' );
+        $('#g_right span').html( '0/3' );
         $('#game_cover').show();
         $('#game_tip').show();
         $('#result').hide();
