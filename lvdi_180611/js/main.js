@@ -949,7 +949,7 @@ function Game(){
                 $('#f'+i).css('left', p.left+$('#p'+i).width()/3+'px');
                 $('#f'+i).css('top', p.top-$('body').width()*0.07/rate/2+'px');
                 $('#dscb'+i).css('left', p.left+$('#p0').width()/3+'px');
-                $('#dscb'+i).css('top', top+'px');
+                $('#dscb'+i).css('top', (top+20)+'px');
                 $('.ship').css('left', p.left+$('#p'+i).width()/3-210+'px');
             }
             $('.gps').on('touchend', this.collect);
