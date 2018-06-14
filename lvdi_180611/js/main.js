@@ -537,6 +537,7 @@ function Index(){
         });
 
         $('#bt_start').click( function(){
+            $("#indexPage").hide();
             location.hash = 'game';
         } );
 
